@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio Aufgabe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<!-- Kopfbereich -->
+<header>
+    <h1>&#128269; Die Produktsuche!</h1>
+</header>
+
+<!-- Startseite - Flexbox Container für mobile Geräte -->
+<body>
+  <main id="startseite">
+  <label>Welches Produkt suchen Sie?</label>
+  <br>
+  <br>
+  <input type="text" id="searchInput" placeholder="Produktname eingeben"></input>
+    <button onclick="fetchData()" id="searchButton">SUCHEN</button>
+  <br>
+  <br>
+  </main>
+<body>
+    
+
+<!-- Ergebnisseite als Übersicht mit Links -->
+  <main id="ergebnis">
+    <section>
+    <h2>Ergebnisse</h2>
+    <section id="products"></section>
+    <p id="responseFailed"></p>
+    </section>
+  </main>
+
+<!-- Ergebnisseite der Kategorie als Übersicht mit Links -->
+  <main id="ergebniskategorie">
+    <section>
+    <h2>Produkte mit der gleichen Kategorie</h2>
+    <section id="otherproducts"></section>
+    <p id="responseFailed"></p>
+    </section>
+  </main>
+
+<!-- keine Ergebnisse -->
+  <main id="keine">
+    <h2>Es wurden keine Produkte gefunden!</h2>
+  </main>
+    
+<!-- Produktseite -->
+  <main id="produkt">
+    <div>
+    <h2 id="produktname">Produktname</h2>
+    <img id="produktbild" src="" alt="produktbild">
+    <p id="preis">Preis:</p><span id="produktpreis"></span>
+    <p id="beschreibung">Beschreibung:</p><span id="produktbeschreibung"></span>
+    <p id="kategorie">Kategorie:</p><span id="produktkategorie"></span>
+    <p id="marke">Marke:</p><span id="produktmarke"></span>
+    <p id="lagerbestand">Lagerbestand:</p><span id="produktbestand"></span>
+    </div>
+  </main>
+
+<!-- Produkte mit der selben Kategorie anzeigen -->
+  <main id="kategorieAnzeige">
+    <br>
+    <br>
+    <button onclick="showCategoryList()" id="categoryButton">Weitere Artikel der selben Kategorie</button>
+    <br>
+  </main>
+
+
+<!-- Seite neu laden -->
+  <main id="neu">
+    <br>
+    <p>Suche neu laden:</p>
+    <i class="fas fa-sync-alt" onclick="refreshPage()"></i>
+    <br>
+    <br>
+  </main>
+
+</body>
+
+<!-- Fußbereich -->
+<footer>
+    Web-Programming since 2023 &copy; Dominic Mohrlok
+</footer>
+
+</html>
